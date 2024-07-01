@@ -27,6 +27,12 @@ class ProductsController extends Controller
         return $product;
     }
 
+    public function show(string $id)
+    {
+        $product = $this->productService->showProduct($id);
+        return $product;
+    }
+
     public function update(Request $request, string $id)
     {
         $product = $this->productService->editProduct($request, $id);

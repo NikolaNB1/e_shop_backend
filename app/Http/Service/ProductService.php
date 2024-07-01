@@ -47,7 +47,7 @@ class ProductService
         return $product;
     }
 
-    public function showProduct($id)
+    public function showProduct(string $id)
     {
         $product = Product::find($id);
         return $product;
@@ -78,7 +78,7 @@ class ProductService
         return $product;
     }
 
-    public function deleteProduct($id)
+    public function deleteProduct(string $id)
     {
         Product::destroy($id);
     }
